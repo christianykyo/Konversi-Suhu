@@ -1,0 +1,122 @@
+<html>
+
+    <head>
+        <title> Konversi Suhu </title>
+        <script type="text/javascript" src="latjs1.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Konversi Suhu </title>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+
+        <style>
+        body {
+          background-image: url('Pendek.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+        </style>
+
+        <script type="text/javascript">
+        function cel() {
+            var x = celc.val1.value
+            y = (x / 100) * 80;
+            document.getElementById("hsl").innerHTML = "Hasilnya : " + y + " Reamur";
+            document.getElementById("persen").style.width = x + "%";
+        }
+        function kel() {
+
+            x = eval(kelv.val2.value);
+            k = x + 273;
+
+            document.getElementById("hslKel").innerHTML = "Hasilnya : " + k + " Kelvin";
+            document.getElementById("persenK").style.width = x + "%";
+        }
+        function far() {
+            x = eval(fare.val2.value);
+            k = (9 / 5 * x) + 32;
+            document.getElementById("hslFar").innerHTML = "Hasilnya : " + k + " Farenheit";
+            document.getElementById("persenF").style.width = x + "%";
+        }
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+                <div class="card col-sm-6">
+                    <div class="card-header bg-dark text-white text-center">
+                    Konversi Suhu (Celcius Ke Reamur)
+                    </div>
+
+                    <div class="card-body">
+                        <form name="celc">
+                            <div class="form-group">
+                                <label>Masukan Derajat Celcius</label>
+                                <input class="form-control" name="val1" placeholder="Celcius" />
+                            </div>
+                            <input type="button" name="ll" onclick="cel()" class="btn btn-success btn"
+                                value="Konversikan"><br><br>
+                            <div id="hsl" class="alert alert-info">
+                                Hasil:
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-12 footer">
+                        <strong>© By Chris</strong>
+                    </div>
+                    <br>
+                </div>
+                <br>
+                <div class="card col-sm-6">
+                    <div class="card-header bg-danger text-white text-center">
+                        Konversi Suhu (Celcius Ke Farenheit)
+                    </div>
+
+                    <div class="card-body">
+                        <form name="fare">
+                            <div class="form-group">
+                                <label>Masukan Derajat Celcius</label>
+                                <input class="form-control" name="val2" placeholder="Celcius" />
+                            </div>
+                            <input type="button" onclick="far()" class="btn btn-success btn" value="Konversikan"><br><br>
+                            <div id="hslFar" class="alert alert-info">
+                                Hasil:
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-12 footer">
+                        <strong>© By Chris</strong>
+                    </div>
+                    <br>
+                </div>
+            <br>
+            <div class="row">
+                <div class="card col-sm-6">
+                    <div class="card-header bg-secondary text-white text-center">
+                        Konversi Suhu (Celcius Ke Kelvin)
+                    </div>
+
+                    <div class="card-body">
+                        <form name="kelv">
+                            <div class="form-group">
+                                <label>Masukan Derajat Celcius</label>
+                                <input class="form-control" name="val2" placeholder="Celcius" />
+                            </div>
+                            <input type="button" onclick="kel()" class="btn btn-success btn" value="Konversikan"><br><br>
+                            <div id="hslKel" class="alert alert-info">
+                                Hasil:
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-12 footer">
+                        <strong>© By Chris</strong>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
